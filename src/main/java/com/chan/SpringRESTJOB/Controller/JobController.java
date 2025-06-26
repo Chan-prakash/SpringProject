@@ -45,9 +45,16 @@ public class JobController {
 
     @DeleteMapping("jobPost/{postId}")
     public void delete(@PathVariable("postId")int postId){
+        System.out.println("Deleted sucessfully");
         service.deletejob(postId);
     }
 
 
 
+    @PostMapping("load")
+    public void loadJob()
+    {
+        System.out.println("success");
+         service.loadJob();
+    }
 }
